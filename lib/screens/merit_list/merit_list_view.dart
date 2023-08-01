@@ -26,7 +26,7 @@ class MeritListView extends StatelessWidget {
             Center(
               child: Container(
                 height: MediaQuery.of(context).size.height/1.5,
-                width: MediaQuery.of(context).size.width/ 1.3,
+                width: MediaQuery.of(context).size.width/ 1.1,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
@@ -55,6 +55,8 @@ class MeritListView extends StatelessWidget {
                                   // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: [
                                     meritListHeading('ETEA Id', MediaQuery.of(Get.context!).size.width/9,),
+                                    
+                                    meritListHeading('Merit No.', MediaQuery.of(Get.context!).size.width/9),
 
                                     meritListHeading('Name', MediaQuery.of(Get.context!).size.width/5,),
 
@@ -82,6 +84,7 @@ class MeritListView extends StatelessWidget {
                                       child: Row(
                                         // mainAxisAlignment: MainAxisAlignment.spaceAround,
                                         children: [
+                                          meritListText(viewModel.meritList[index].eteaNumber.toString(), MediaQuery.of(Get.context!).size.width/9),
                                           meritListText(viewModel.meritList[index].meritNumber.toString(), MediaQuery.of(Get.context!).size.width/9),
                                           meritListText(viewModel.meritList[index].studentName.toString(), MediaQuery.of(Get.context!).size.width/5),
                                           meritListText(viewModel.meritList[index].fatherName.toString(), MediaQuery.of(Get.context!).size.width/5),
@@ -103,7 +106,7 @@ class MeritListView extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: MediaQuery.of(context).size.width/8,
+                      left: MediaQuery.of(context).size.width/8.3,
                       child: Container(
                         color: const Color(0xffd1d3da),
                         width: 1.5,
@@ -111,7 +114,7 @@ class MeritListView extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: MediaQuery.of(context).size.width/3.2,
+                      left: MediaQuery.of(context).size.width/4.5,
                       child: Container(
                         color: const Color(0xffd1d3da),
                         width: 1.5,
@@ -119,7 +122,7 @@ class MeritListView extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      right: MediaQuery.of(context).size.width/4.1,
+                      left: MediaQuery.of(context).size.width/2.35,
                       child: Container(
                         color: const Color(0xffd1d3da),
                         width: 1.5,
@@ -127,7 +130,15 @@ class MeritListView extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      right: MediaQuery.of(context).size.width/7.8,
+                      right: MediaQuery.of(context).size.width/3.62,
+                      child: Container(
+                        color: const Color(0xffd1d3da),
+                        width: 1.5,
+                        height: MediaQuery.of(context).size.height,
+                      ),
+                    ),
+                    Positioned(
+                      right: MediaQuery.of(context).size.width/6.6,
                       child: Container(
                         color: const Color(0xffd1d3da),
                         width: 1.5,
